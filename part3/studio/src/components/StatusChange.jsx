@@ -1,11 +1,16 @@
 import { useState } from 'react';
 
 export default function StatusChange () {
+   const [notes, setNotes] = useState('');
+   const [recipeStatus, setrecipeStatus] = useState(false);
 
    const handleChange = (event) => {
+      recipeStatus(event.target.value)
    }
 
    const handleSubmit = (event) => {
+      alert("Recipe Submitted");
+      event.preventDefault();
    }
 
    return (
